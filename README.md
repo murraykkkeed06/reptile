@@ -8,13 +8,13 @@ git clone https://github.com/murraykkkeed06/reptile.git
 [2] go to folder
 cd reptile
 
-[2] build environment
+[3] build environment
 conda create --name <env> --file requirements.txt
 
-[3] activate environment
+[4] activate environment
 
-conda activate re
+conda activate <env> 
 
-[4] run script
+[5] run script
 
 python main.py
