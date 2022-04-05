@@ -23,7 +23,7 @@ print(f"\n[keywords]: {keywords} \n[search range]: 1-{pages} pages\n")
 
 
 # output file setting
-filename = datetime.now().strftime("%Y_%m_%d_%H_%M") + keywords + ".csv"
+filename = datetime.now().strftime("%Y_%m_%d_%H_%M_") + keywords + ".csv"
 if path.exists(filename):
     os.remove(filename)
 
