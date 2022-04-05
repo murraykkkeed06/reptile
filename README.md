@@ -1,13 +1,18 @@
-# reptile
+
+# Reptile
 ----
-#clone repo
+[1] clone repo
+
 git clone https://github.com/murraykkkeed06/reptile.git
 
-#build environment
+[2] build environment
+
 conda env create -f environment.yml
 
-#activate environment
+[3] activate environment
+
 conda activate re
 
-#run main.py
+[4] run script
+
 python main.py
