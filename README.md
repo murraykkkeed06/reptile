@@ -1,22 +1,33 @@
-
 # Reptile
-----
-[1] clone repo
 
+> Download the [driver](https://chromedriver.chromium.org/downloads) according to your chrome version and os system, and put it in the reptile folder
+
+
+```bash=
+[environment]: python 3.9
+[browser]: chrome
+
+#clone repo
 git clone https://github.com/murraykkkeed06/reptile.git
 
-[2] go to folder
-
+#move to folder
 cd reptile
 
-[3] build environment
+#build environment
+conda create --name env 
 
-conda create --name <env> --file requirements.txt
+#activate 
+conda activate env
 
-[4] activate environment
+#install pip
+conda install pip
 
-conda activate <env> 
+#install requirement
+pip install requirement.txt
 
-[5] run script
+#(optional)set permission
+chmod 755 chromedirver
 
+#execute
 python main.py
+```
