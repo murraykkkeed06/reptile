@@ -17,13 +17,13 @@ SLEEP_TIME = 2
 warnings.filterwarnings("ignore")
 
 # ask user to give input
-keywards = input("Enter keyword seperate by white-space: \n")
+keywords = input("Enter keyword seperate by white-space: \n")
 pages = input("\nHow many pages you want to search [~999]: \n")
-print(f"\n[keywards]: {keywards} \n[search range]: 1-{pages} pages\n")
+print(f"\n[keywords]: {keywords} \n[search range]: 1-{pages} pages\n")
 
 
 # output file setting
-filename = datetime.now().strftime("%Y_%m_%d_%H_%M") + keywards + ".csv"
+filename = datetime.now().strftime("%Y_%m_%d_%H_%M") + keywords + ".csv"
 if path.exists(filename):
     os.remove(filename)
 
@@ -39,7 +39,7 @@ options.add_argument("--disable-notifications")
 options.add_argument("--headless")
 options.add_argument("--disable-gpu")
 chrome = webdriver.Chrome("./chromedriver", chrome_options=options)
-chrome.get("https://www.reddit.com/search/?q=" + keywards)
+chrome.get("https://www.reddit.com/search/?q=" + keywords)
 
 # scroll down page to access the website
 for x in range(1, int(pages)):
@@ -72,8 +72,8 @@ for post in posts:
 
     # check topic or content match user input
     no_match = True
-    for i in range(len(keywards.split())):
-        keyward = keywards.split()[i].lower()
+    for i in range(len(keywords.split())):
+        keyward = keywords.split()[i].lower()
         keyward_re1 = " " + keyward + " "
         keyward_re2 = "^" + keyward + " "
         keyward_re3 = " " + keyward + "$"
