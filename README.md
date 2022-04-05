@@ -5,9 +5,11 @@
 
 git clone https://github.com/murraykkkeed06/reptile.git
 
-[2] build environment
+[2] go to folder
+cd reptile
 
-conda env create -f environment.yml
+[2] build environment
+conda create --name <env> --file requirements.txt
 
 [3] activate environment
 
